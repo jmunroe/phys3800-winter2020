@@ -17,7 +17,6 @@ c
          call exit(1)
       endif
 
-   10 print *,'Enumerating SAW on square lattice: #steps ?'
       call getarg(1, out)
       read(out, *) nstep
       if(nstep.lt.2) then
@@ -27,9 +26,8 @@ c
       endif
 
       nstep=min(nstep,maxstep)
-      print *,'output file name ?'
       call getarg(2, out)
-   15 format(a12)
+c   15 format(a12)
       do 30 i=2,nstep
          wk(i)=0.d0
          ce2(i)=0.d0
